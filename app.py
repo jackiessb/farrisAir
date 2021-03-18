@@ -1,3 +1,11 @@
+# Run env command: source env/bin/activate
+# Deactivate env command: deactivate
+"""
+Test server command: 
+export FLASK_ENV=development
+flask run
+"""
+
 from flask import Flask
 from flask import render_template
 
@@ -9,7 +17,7 @@ def render_page():
 
 @main.route('/home')
 def index():
-    return "HOME PAGE"
+    return "HOMER PAGE"
 
 if __name__ == "__main__":
     main.run(debug=False,host='0.0.0.0')

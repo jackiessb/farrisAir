@@ -1,14 +1,24 @@
-# farrisAir
-A custom AirDrop system for Farris Hall.
+# Farris Air
+### _Air Drop for Honors_
 
 ## Development
-Follow these commands to start the production build
-(Make sure that npm is installed)
+To activate the virtual environment: 
+```sh
+source env/bin/activate
+```
 
-(To build the files)
-cd client
-npm i
-npm run build
+Deactivate the virtual environment: 
+```sh
+deactivate
+```
 
-(To run the server make sure you are in the root directory)
-python3 farrisAir.py
+To run server development environment:
+```sh
+export FLASK_ENV=development
+flask run
+```
+
+If you add any new modules, run this command to update server requirements
+```sh
+pip freeze > requirements.txt
+```
