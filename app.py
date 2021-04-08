@@ -15,6 +15,7 @@ Password: raspberry1
 
 # Use this to create a user
 # zachj MySQL Password: parris71
+# Use this to create a password: https://stackoverflow.com/questions/1559955/host-xxx-xx-xxx-xxx-is-not-allowed-to-connect-to-this-mysql-server
 
 from flask import Flask
 from flask import render_template
