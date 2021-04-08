@@ -6,8 +6,34 @@ export FLASK_ENV=development
 flask run
 """
 
+"""
+To connect to the database: 
+sudo su root
+mysql -u root -p
+Password: raspberry1
+"""
+
+# Use this to create a user
+# zachj MySQL Password: parris71
+
 from flask import Flask
 from flask import render_template
+
+import mysql.connector
+from mysql.connector import errorcode
+
+try:
+    cnx = mysql.connector.connect(user='zachj', password='parris71', host='10.253.0.101', database='test_database')
+except mysql.connector.Error as err:
+    if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+        print("Something is wrong with your user name or password")
+    elif err.errno == errorcode.ER_BAD_DB_ERROR:
+        print("Database does not exist")
+    else:
+        print(err)
+else:
+    cnx.close()
+
 
 main = Flask(__name__, template_folder="client/build", static_folder="client/build/static")
 
