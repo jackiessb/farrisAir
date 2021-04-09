@@ -1,0 +1,36 @@
+OAuth 2.0 Authorization Model/Info:
+
+(taking total guesses here)
+Resource Owner = Zach by default
+Authorization Server = Google -- will need to access their API which has unique key structure.
+Resource Server = Not sure what this would be
+
+1.2.  Protocol/Basic Code Flow
+
+     +--------+                               +---------------+
+     |        |--(A)- Authorization Request ->|   Resource    |
+     |        |                               |     Owner     |
+     |        |<-(B)-- Authorization Grant ---|               |
+     |        |                               +---------------+
+     |        |
+     |        |                               +---------------+
+     |        |--(C)-- Authorization Grant -->| Authorization |
+     | Client |                               |     Server    |
+     |        |<-(D)----- Access Token -------|               |
+     |        |                               +---------------+
+     |        |
+     |        |                               +---------------+
+     |        |--(E)----- Access Token ------>|    Resource   |
+     |        |                               |     Server    |
+     |        |<-(F)--- Protected Resource ---|               |
+     +--------+                               +---------------+
+
+IN OTHER WORDS: request from Google --> Google sends unique code --> Client sends token in exchange for code --> Token recieved --> call Google API --> profit
+
+"OAuth 2.0 uses two endpoints: the /authorize endpoint and the /oauth/token endpoint" -- will need to add these thru Flask backend?
+
+RESOURCES AND LINKS:
+https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow
+https://auth0.com/docs/protocols/protocol-oauth2#authorization-endpoint
+https://developers.google.com/identity/protocols/oauth2
+

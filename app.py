@@ -1,5 +1,6 @@
 # Run env command: source env/bin/activate
 # Deactivate env command: deactivate
+
 """
 Test server command: 
 export FLASK_ENV=development
@@ -34,7 +35,6 @@ except mysql.connector.Error as err:
         print(err)
 else:
     cnx.close()
-
 
 main = Flask(__name__, template_folder="client/build", static_folder="client/build/static")
 
