@@ -22,3 +22,8 @@ If you add any new modules, run this command to update server requirements
 ```sh
 pip freeze > requirements.txt
 ```
+
+To check for requirements
+```sh
+py -m pip install -r requirements.txt
+```

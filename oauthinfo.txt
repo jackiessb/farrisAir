@@ -33,4 +33,6 @@ RESOURCES AND LINKS:
 https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow
 https://auth0.com/docs/protocols/protocol-oauth2#authorization-endpoint
 https://developers.google.com/identity/protocols/oauth2
+https://docs.authlib.org/en/latest/flask/2/authorization-server.html
+https://realpython.com/flask-google-login/#creating-your-own-web-application -- tutorial
 
