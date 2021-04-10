@@ -24,6 +24,8 @@ from flask import render_template
 import mysql.connector
 from mysql.connector import errorcode
 
+from authlib.integrations.flask_oauth2 import flask_oauth2
+
 try:
     cnx = mysql.connector.connect(user='zachj', password='parris71', host='10.253.0.101', database='test_database')
 except mysql.connector.Error as err:
