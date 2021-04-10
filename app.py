@@ -24,8 +24,9 @@ from flask import render_template
 import mysql.connector
 from mysql.connector import errorcode
 
-from authlib.integrations.flask_oauth2 import flask_oauth2
+# fix oauth2 import
 
+# database stuff
 try:
     cnx = mysql.connector.connect(user='zachj', password='parris71', host='10.253.0.101', database='test_database')
 except mysql.connector.Error as err:
@@ -38,8 +39,11 @@ except mysql.connector.Error as err:
 else:
     cnx.close()
 
+# OAuth stuff
+
 main = Flask(__name__, template_folder="client/build", static_folder="client/build/static")
 
+# routes
 @main.route('/render-page')
 def render_page(): 
     return render_template('index.html')

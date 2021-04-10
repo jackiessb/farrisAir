@@ -6,4 +6,4 @@ MarkupSafe==1.1.1
 Werkzeug==1.0.1
 mysql.connector==2.2.9
 requests==2.25.1
-Authlib==0.15.3
+oauthlib==3.1.0
